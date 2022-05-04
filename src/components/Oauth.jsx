@@ -14,10 +14,10 @@ export function Oauth({itens}) {
               Preencher os campos:<br />
               <br />
 
-              Client Name: "{item.oauth.clientName}"<br />
-              Organization: "{item.oauth.organization}"<br />
-              Description: "{item.oauth.description}"<br />
-              Scope: "{item.oauth.scope}"<br />
+              Client Name: {item.oauth.clientName}<br />
+              Organization: {item.oauth.organization}<br />
+              Description: {item.oauth.description}<br />
+              Scope: {item.oauth.scope}<br />
               <br />
               Client - key: Substituir o valor que já está no campo por este: "{item.oauth.clientKey}"<br />
               Client - secret: Substituir o valor que já está no campo por este: "{item.oauth.clientSecret}"<br />

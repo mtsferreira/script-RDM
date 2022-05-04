@@ -24,8 +24,11 @@ td {
 }
 
 #list-name {
-  line-height: 0;
-  margin: 0;
+  display: block;
+}
 
+#subject {
+  white-space: nowrap;
+  margin: 0;
 }
 

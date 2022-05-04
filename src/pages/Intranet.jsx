@@ -31,6 +31,7 @@ export function Intranet() {
                 <Link to={"/"}>INTERNET</Link>
             </button>
 
+
             <p>
                 GRUPO: DITI - OPERACAO INTRANET / CORPORATIVO<br />
                 IC AFETADO: INOV - INOVACAO_RTN<br />
@@ -40,11 +41,11 @@ export function Intranet() {
                 SERVIDORES<br />
                 ==================<br />
                 DITI - OPERACAO INTRANET / CORPORATIVO<br />
-                <br />
+            </p>
 
-
-                CORP
-                <table>
+            CORP
+            <table>
+                <tbody>
                     <tr>
                         <th>Servidor</th>
                         <th>IP</th>
@@ -65,10 +66,12 @@ export function Intranet() {
                         <td>10.222.24.204</td>
                         <td>Linux</td>
                     </tr>
-                </table><br />
+                </tbody>
+            </table><br />
 
-                NEXT
-                <table>
+            NEXT
+            <table>
+                <tbody>
                     <tr>
                         <th>Servidor</th>
                         <th>IP</th>
@@ -84,10 +87,12 @@ export function Intranet() {
                         <td>10.197.204.40</td>
                         <td>Linux</td>
                     </tr>
-                </table><br />
+                </tbody>
+            </table><br />
 
-                PIX
-                <table>
+            PIX
+            <table>
+                <tbody>
                     <tr>
                         <th>Servidor</th>
                         <th>IP</th>
@@ -103,65 +108,66 @@ export function Intranet() {
                         <td>10.222.25.190</td>
                         <td>Linux</td>
                     </tr>
-                </table><br />
+                </tbody>
+            </table><br />
 
-                <p>
-                    --------------------------------------------------------------------------<br />
-                    1º - OAUTH MANAGER<br />
-                    --------------------------------------------------------------------------<br />
-                    Logar no https://10.222.24.166:8443/oauth/manager<br />
-                    Clicar em 'Clients'<br />
-                    ------------------------------------------------------------------------------------<br />
-                </p>
-
-                <Oauth itens={clients} />
-
-                <p>
-                    ----------------------------------------<br />
-                    VERIFICAÇÃO DE SINCRONISMO<br />
-                    ----------------------------------------<br />
-                    Ao final do procedimento entrar nos dois oauth para verificar se o sincronismo do cadastro aconteceu<br />
-                    https://10.222.24.166:8443/oauth/manager<br />
-                    https://10.222.24.167:8443/oauth/manager<br />
-                    ----------------------------------------<br />
-                    <br /><br />
-
-                    --------------------------------------------------------------------------<br />
-                    2º - OAUTH MANAGER NEXT - cadastro<br />
-                    --------------------------------------------------------------------------<br />
-                    Logar no https://10.197.204.40:8443/oauth/manager ou https://10.197.204.41:8443/oauth/manager<br />
-                    Clicar em 'Clients'<br /><br />
-                </p>
-
-                <Oauth itens={clients} />
-
-
-                <p>
-                    ----------------------------------------<br />
-                    VERIFICAÇÃO DE SINCRONISMO<br />
-                    ----------------------------------------<br />
-                    Ao final do procedimento entrar nos dois oauth para verificar se o sincronismo do cadastro aconteceu<br />
-                    https://10.197.204.40:8443/oauth/manager<br />
-                    https://10.197.204.41:8443/oauth/manager<br />
-                    ----------------------------------------<br />
-                    <br />
-
-                    --------------------------------------------------------------------------<br />
-                    3º - OAUTH MANAGER PIX - cadastro<br />
-                    --------------------------------------------------------------------------<br />
-                    Logar no https://10.222.25.189:8443/oauth/manager ou https://10.222.25.190:8443/oauth/manager<br />
-                    Clicar em 'Clients'<br /><br />
-                </p>
-
-                <Oauth itens={filteredClients} />
+            <p>
+                --------------------------------------------------------------------------<br />
+                1º - OAUTH MANAGER<br />
+                --------------------------------------------------------------------------<br />
+                Logar no https://10.222.24.166:8443/oauth/manager<br />
+                Clicar em 'Clients'<br />
+                ------------------------------------------------------------------------------------<br />
             </p>
 
+            <Oauth itens={clients} />
+
+            <p>
+                ----------------------------------------<br />
+                VERIFICAÇÃO DE SINCRONISMO<br />
+                ----------------------------------------<br />
+                Ao final do procedimento entrar nos dois oauth para verificar se o sincronismo do cadastro aconteceu<br />
+                https://10.222.24.166:8443/oauth/manager<br />
+                https://10.222.24.167:8443/oauth/manager<br />
+                ----------------------------------------<br />
+                <br /><br />
+
+                --------------------------------------------------------------------------<br />
+                2º - OAUTH MANAGER NEXT - cadastro<br />
+                --------------------------------------------------------------------------<br />
+                Logar no https://10.197.204.40:8443/oauth/manager ou https://10.197.204.41:8443/oauth/manager<br />
+                Clicar em 'Clients'<br /><br />
+            </p>
+
+            <Oauth itens={clients} />
+
+
+            <p>
+                ----------------------------------------<br />
+                VERIFICAÇÃO DE SINCRONISMO<br />
+                ----------------------------------------<br />
+                Ao final do procedimento entrar nos dois oauth para verificar se o sincronismo do cadastro aconteceu<br />
+                https://10.197.204.40:8443/oauth/manager<br />
+                https://10.197.204.41:8443/oauth/manager<br />
+                ----------------------------------------<br />
+                <br />
+
+                --------------------------------------------------------------------------<br />
+                3º - OAUTH MANAGER PIX - cadastro<br />
+                --------------------------------------------------------------------------<br />
+                Logar no https://10.222.25.189:8443/oauth/manager ou https://10.222.25.190:8443/oauth/manager<br />
+                Clicar em 'Clients'<br /><br />
+            </p>
+
+            <Oauth itens={filteredClients} />
+
+
 
             <p>=========================================================================================================================================================================</p>
             <p>=========================================================================================================================================================================</p>
             <p>=========================================================================================================================================================================</p>
 
-            <IntraRetorno clients={clients} filteredClients={filteredClients}/>
+            <IntraRetorno clients={clients} filteredClients={filteredClients} />
         </div>
     )
 }

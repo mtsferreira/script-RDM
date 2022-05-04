@@ -1,7 +1,7 @@
 export function InterRetorno({ clients, filteredClients }) {
     return (
         <>
-            <p>
+            <span>
                 Grupo: DITI - OPERACAO INTERNET<br />
                 IC AFETADO: INOV - INOVACAO_RTN<br />
                 Template: PLATAFORMA OPEN<br />
@@ -10,14 +10,19 @@ export function InterRetorno({ clients, filteredClients }) {
                 SERVIDORES<br />
                 ==================<br />
                 DITI - OPERACAO INTERNET<br />
+            </span>
 
-                OPENAPI
-                <table>
+
+            OPENAPI
+            <table>
+                <tbody>
                     <tr>
-                        <th>Servidor</th>
-                        <th>IP</th>
-                        <th>Sistema Operacional</th>
+                        <td>Servidor</td>
+                        <td>IP</td>
+                        <td>Sistema Operacional</td>
                     </tr>
+
+
                     <tr>
                         <td>IM-AL-AP-061</td>
                         <td>10.215.113.10</td>
@@ -28,8 +33,10 @@ export function InterRetorno({ clients, filteredClients }) {
                         <td>10.215.113.11</td>
                         <td>Linux</td>
                     </tr>
-                </table><br />
+                </tbody>
+            </table><br />
 
+            <span>
                 <br />
                 --------------------------------------------------------------------------<br />
                 1º - OAUTH MANAGER<br />
@@ -43,9 +50,9 @@ export function InterRetorno({ clients, filteredClients }) {
                 - Repetir os passos abaixos, alterando o campo "NOME PARCEIRO" pela lista abaixo.<br /><br />
 
                 {clients.map((item) => (
-                    <li id='list-name' key={item.organization}>
-                        <p>{item.razaoSocial}</p>
-                    </li>
+                   
+                        <span id='list-name' key={item.clientKey}>{item.razaoSocial}</span>
+                    
                 ))}
                 <br />
 
@@ -73,9 +80,9 @@ export function InterRetorno({ clients, filteredClients }) {
                 <br />
 
                 {clients.map((item) => (
-                    <li id='list-name' key={item.organization}>
-                        <p>{item.policy.certificateName}</p>
-                    </li>
+
+                    <span id="list-name" key={item.clientKey}>{item.policy.certificateName}</span>
+
                 ))}
 
                 <br />
@@ -88,10 +95,11 @@ export function InterRetorno({ clients, filteredClients }) {
                 <br />
                 - Repetir os passos abaixos, alterando o campo "NOME PARCEIRO" pela lista abaixo.<br />
                 <br />
+
                 {filteredClients.map((item) => (
-                    <li id='list-name' key={item.organization}>
-                        <p>{item.policy.certificateName}</p>
-                    </li>
+                  
+                        <span id="list-name" key={item.clientKey}>{item.policy.certificateName}</span>
+                    
                 ))}
                 <br />
                 - No canto superior esquerdo da tela, clicar no campo Identity Providers<br />
@@ -101,7 +109,7 @@ export function InterRetorno({ clients, filteredClients }) {
                 - Buscar na coluna "Name" o nome "NOME PARCEIRO"<br />
                 - Clicar sobre a linha<br />
                 - Clicar no botão "Delete", confirme a exclusão<br />
-            </p>
+            </span>
         </>
     )
 }
